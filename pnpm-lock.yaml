@@ -91,14 +91,7 @@ importers:
 
   apps/web: {}
 
-  apps/web-e2e:
-    devDependencies:
-      '@playwright/test':
-        specifier: ^1.52.0
-        version: 1.52.0
-      '@types/node':
-        specifier: ^20
-        version: 20.17.31
+  apps/web-e2e: {}
 
 packages:
 
