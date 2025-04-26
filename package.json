@@ -4,6 +4,7 @@
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf node_modules pnpm-lock.yaml && pnpm install",
+    "generate:tree": "struct -i .next -i dist -i playwright-report -i test-results -i .nx -o project.tree",
     "admin:dev": "pnpm --filter admin dev",
     "admin:build": "pnpm --filter admin build",
     "admin:lint": "pnpm --filter admin lint",
@@ -16,33 +17,34 @@
   },
   "private": true,
   "dependencies": {
+    "next": "15.3.1",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "15.3.1"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@eslint/js": "^9.22.0",
     "@nx/js": "20.8.1",
+    "@playwright/test": "^1.52.0",
+    "@structure-codes/cli": "^0.0.6",
     "@swc-node/register": "~1.9.1",
     "@swc/core": "~1.5.7",
     "@swc/helpers": "~0.5.11",
-    "nx": "20.8.1",
-    "prettier": "^2.6.2",
-    "tslib": "^2.3.0",
-    "typescript": "~5.7.2",
-    "@eslint/js": "^9.22.0",
+    "@types/node": "^20",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.3.4",
     "eslint": "^9.22.0",
+    "eslint-config-next": "15.3.1",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^16.0.0",
+    "nx": "20.8.1",
+    "prettier": "^2.6.2",
+    "tslib": "^2.3.0",
+    "typescript": "~5.7.2",
     "typescript-eslint": "^8.26.1",
-    "vite": "^6.3.1",
-    "@types/node": "^20",
-    "eslint-config-next": "15.3.1",
-    "@eslint/eslintrc": "^3",
-    "@playwright/test": "^1.52.0"
-  },
+    "vite": "^6.3.1"
+   },
   "packageManager": "pnpm@10.8.0"
 }
