@@ -24,5 +24,14 @@ jobs:
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
 
-      - name: Build project
-        run: pnpm build
+      - name: Lint admin
+        run: pnpm admin:lint
+
+      - name: Lint web
+        run: pnpm web:lint
+
+      - name: Build admin
+        run: pnpm admin:build
+
+      - name: Build web
+        run: pnpm web:build
